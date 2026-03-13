@@ -1,0 +1,57 @@
+:root {
+  /* ── Colores base ── */
+  --color-bg:           #0f0f0f;
+  --color-bg-card:      #1a1a1a;
+  --color-bg-input:     #1e1e1e;
+  --color-border:       #2a2a2a;
+  --color-border-hover: #3a3a3a;
+
+  /* ── Texto ── */
+  --color-text-primary:   #e8e8e8;
+  --color-text-secondary: #888888;
+  --color-text-muted:     #555555;
+
+  /* ── Acento principal — morado ── */
+  --color-accent:         #c084fc;
+  --color-accent-dark:    #1e1530;
+  --color-accent-hover:   #a855f7;
+
+  /* ── Colores semánticos ── */
+  --color-success:        #4ade80;
+  --color-success-dark:   #0d2318;
+  --color-warning:        #facc15;
+  --color-danger:         #f87171;
+  --color-info:           #60a5fa;
+
+  /* ── Tipografía ── */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --font-size-xs:   11px;
+  --font-size-sm:   13px;
+  --font-size-base: 15px;
+  --font-size-md:   17px;
+  --font-size-lg:   20px;
+  --font-size-xl:   24px;
+  --font-size-2xl:  30px;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+
+  /* ── Espaciado ── */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  32px;
+  --space-2xl: 48px;
+
+  /* ── Bordes ── */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-full: 9999px;
+
+  /* ── Transiciones ── */
+  --transition: 0.2s ease;
+}
