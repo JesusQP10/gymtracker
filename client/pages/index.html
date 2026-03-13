@@ -15,28 +15,45 @@
         <form id="login-form" class="card">
             <h1>Iniciar sesión</h1>
             <p>Inicia sesión para continuar</p>
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-input" id="email" name="email" required placeholder="tu@email.com">
-            <label for="password" class="form-label">Contraseña</label>
-            <input type="password" class="form-input" id="password" name="password" required placeholder="Tu contraseña">
-            <button type="submit"class="btn btn--primary btn--full" >Iniciar sesión</button>
-            <p id="a-registro">¿No tienes cuenta? <a href="#"class="text-accent">Regístrate</a></p>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-input" id="email" name="email" placeholder="tu@email.com">
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-input" id="password" name="password" placeholder="Tu contraseña">
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full">Iniciar sesión</button>
+            <p id="a-registro">¿No tienes cuenta? <a href="#" class="text-accent">Regístrate</a></p>
         </form>
 
         <form id="register-form" class="card" style="display: none;">
             <h1>Registrarse</h1>
-            <h2>Empieza a trackear tu progreso</h2>
-            <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-input" id="nombre" name="nombre" required placeholder="Tu nombre">
-            <label for="register-email" class="form-label">Email</label>
-            <input type="email" class="form-input" id="register-email" name="email" required placeholder="tu@email.com">
-            <label for="register-password" class="form-label">Contraseña</label>
-            <input type="password" class="form-input" id="register-password" name="password" required placeholder="Tu contraseña">
-            <label for="confirm-password" class="form-label">Confirmar contraseña</label>
-            <input type="password" class="form-input" id="confirm-password" name="confirm-password" required placeholder="Confirma tu contraseña">
+            <p>Empieza a trackear tu progreso</p>
+
+            <div class="form-group">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-input" id="nombre" name="nombre" placeholder="Tu nombre">
+            </div>
+            <div class="form-group">
+                <label for="register-email" class="form-label">Email</label>
+                <input type="email" class="form-input" id="register-email" name="email" placeholder="tu@email.com">
+            </div>
+            <div class="form-group">
+                <label for="register-password" class="form-label">Contraseña</label>
+                <input type="password" class="form-input" id="register-password" name="password" placeholder="Tu contraseña">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password" class="form-label">Confirmar contraseña</label>
+                <input type="password" class="form-input" id="confirm-password" name="confirm-password" placeholder="Confirma tu contraseña">
+            </div>
+
             <button type="submit" class="btn btn--primary btn--full">Registrarse</button>
-            <p id="a-inicio">¿Ya tienes cuenta? <a href="#" class="text-accent"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa>Inicia sesión</a></p>
+            <p id="a-inicio">¿Ya tienes cuenta? <a href="#" class="text-accent">Inicia sesión</a></p>
         </form>
     </div>
+    <script src="../js/pages/auth.js"></script>
 </body>
 </html>
