@@ -12,7 +12,7 @@ Aplicación web fullstack para gestionar rutinas de entrenamiento y visualizar e
 
 ---
 
-## Tecnologías
+## Tecnologías Previstas
 
 **Frontend**
 - HTML5, CSS3, JavaScript ES6+
@@ -56,27 +56,6 @@ Aplicación web fullstack para gestionar rutinas de entrenamiento y visualizar e
 - Node.js 18+
 - MongoDB Atlas (cuenta gratuita)
 
-### Pasos
-
-```bash
-# 1. Clona el repositorio
-git clone https://github.com/tuusuario/gymtracker.git
-cd gymtracker
-
-# 2. Instala las dependencias del servidor
-cd server
-npm install
-
-# 3. Configura las variables de entorno
-cp .env.example .env
-# Edita .env con tus valores reales
-
-# 4. Arranca el servidor
-npm run dev
-```
-
-Abre `client/pages/index.html` en tu navegador o usa Live Server.
-
 ---
 
 ## Estructura del proyecto
@@ -93,7 +72,7 @@ gymtracker/
 ## Autor
 
 **Jesús Quintero**  
-[GitHub](https://github.com/usuario) · [LinkedIn](https://linkedin.com/in/usuario)
+[GitHub](https://github.com/JesusQP10) · [LinkedIn](https://www.linkedin.com/in/jes%C3%BAs-quintero-priego-02832b3a4/)
 
 ---
 
