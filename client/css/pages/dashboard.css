@@ -1,0 +1,200 @@
+/* ── Layout principal ── */
+.dashboard {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+/* ── Sección 1: saludo + stats ── */
+.dashboard__top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.greeting__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.greeting__sub {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-sm);
+}
+
+/* ── Grid de stats ── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  border-top: 2px solid var(--color-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card:nth-child(1) { border-top-color: var(--color-accent); }
+.stat-card:nth-child(2) { border-top-color: var(--color-info); }
+.stat-card:nth-child(3) { border-top-color: var(--color-success); }
+.stat-card:nth-child(4) { border-top-color: var(--color-warning); }
+
+.stat-card:nth-child(1):hover { box-shadow: var(--shadow-glow); }
+
+.stat-card__label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: var(--font-weight-medium);
+}
+
+.stat-card__value {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+/* ── Sección 2: rutina del día + última sesión ── */
+.dashboard__bottom {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: var(--space-md);
+  align-items: start;
+}
+
+/* ── Cabecera de card ── */
+.card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-xs);
+}
+
+.card__title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+}
+
+.card__subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+/* ── Rutina del día ── */
+.dashboard__routine {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-xl);
+}
+
+.exercise-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--space-md);
+}
+
+.exercise-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px var(--space-sm);
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition);
+}
+
+.exercise-item:hover {
+  background-color: var(--color-bg-input);
+}
+
+.exercise-item:not(:last-child) {
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0;
+}
+
+.exercise-item__name {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.exercise-item__meta {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Última sesión ── */
+.dashboard__last-session {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-xl);
+}
+
+.session-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.session-stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  background-color: var(--color-bg-input);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.session-stat__value {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard__bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .greeting__title {
+    font-size: var(--font-size-2xl);
+  }
+}

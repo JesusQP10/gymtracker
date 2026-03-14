@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — GymTracker</title>
+    <link rel="stylesheet" href="/client/css/reset.css">
+    <link rel="stylesheet" href="/client/css/variables.css">
+    <link rel="stylesheet" href="/client/css/main.css">
+    <link rel="stylesheet" href="/client/css/pages/dashboard.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <span class="navbar__logo">Gym<span class="text-accent">Tracker</span></span>
+        <div class="navbar__links">
+            <a href="dashboard.html" class="navbar__link navbar__link--active">Dashboard</a>
+            <a href="#" class="navbar__link">Rutinas</a>
+            <a href="#" class="navbar__link">Progreso</a>
+            <a href="#" class="navbar__link">Perfil</a>
+        </div>
+    </nav>
+
+    <main class="dashboard">
+
+        <!-- Sección 1: saludo + stats -->
+        <section class="dashboard__top">
+            <div class="dashboard__greeting">
+                <h1 class="greeting__title" id="greeting-text"></h1>
+                <p class="greeting__sub">Aquí tienes tu resumen de hoy</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card card">
+                    <span class="stat-card__label">Sesiones este mes</span>
+                    <span class="stat-card__value" id="stat-month">—</span>
+                </div>
+                <div class="stat-card card">
+                    <span class="stat-card__label">Sesiones esta semana</span>
+                    <span class="stat-card__value" id="stat-week">—</span>
+                </div>
+                <div class="stat-card card">
+                    <span class="stat-card__label">Racha actual</span>
+                    <span class="stat-card__value" id="stat-streak">— días</span>
+                </div>
+                <div class="stat-card card">
+                    <span class="stat-card__label">Volumen hoy</span>
+                    <span class="stat-card__value" id="stat-volume">— kg</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: rutina del día + última sesión -->
+        <section class="dashboard__bottom">
+
+            <div class="card dashboard__routine">
+                <div class="card__header">
+                    <h2 class="card__title">Rutina de hoy</h2>
+                    <span class="badge badge--accent" id="routine-day"></span>
+                </div>
+                <p class="card__subtitle" id="routine-name"></p>
+
+                <ul class="exercise-list" id="exercise-list"></ul>
+
+                <button class="btn btn--primary btn--full" id="btn-start">Iniciar sesión</button>
+            </div>
+
+            <div class="card dashboard__last-session">
+                <div class="card__header">
+                    <h2 class="card__title">Última sesión</h2>
+                    <span class="text-secondary text-sm" id="last-session-date">—</span>
+                </div>
+                <p class="card__subtitle" id="last-session-routine">—</p>
+
+                <div class="session-stats">
+                    <div class="session-stat">
+                        <span class="session-stat__label text-secondary text-sm">Duración</span>
+                        <span class="session-stat__value" id="last-duration">— min</span>
+                    </div>
+                    <div class="session-stat">
+                        <span class="session-stat__label text-secondary text-sm">Volumen total</span>
+                        <span class="session-stat__value" id="last-volume">— kg</span>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn--ghost btn--full mt-md">Ver historial</a>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="../js/pages/dashboard.js"></script>
+</body>
+</html>

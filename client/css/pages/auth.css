@@ -7,20 +7,21 @@
   min-height: 100vh;
   padding: var(--space-lg);
   background-color: var(--color-bg);
-  background-image: radial-gradient(
-    ellipse 80% 40% at 50% -10%,
-    var(--color-accent-dark),
-    transparent
-  );
+  background-image:
+    radial-gradient(ellipse 60% 50% at 50% -5%, rgba(192, 132, 252, 0.12), transparent),
+    radial-gradient(ellipse 40% 30% at 80% 80%, rgba(129, 140, 248, 0.06), transparent);
 }
 
 /* ── Logo sobre el card ── */
 #auth-container::before {
   content: 'GymTracker';
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-accent);
-  letter-spacing: 0.08em;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.02em;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: var(--space-xl);
 }
 
@@ -33,14 +34,22 @@
   padding: var(--space-xl);
   width: 100%;
   max-width: 400px;
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+#login-form:hover,
+#register-form:hover {
+  border-color: rgba(192, 132, 252, 0.2);
+  box-shadow: var(--shadow-glow);
 }
 
 /* ── Título ── */
 #login-form h1,
 #register-form h1 {
   font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-semibold);
   color: var(--color-text-primary);
+  letter-spacing: -0.02em;
 }
 
 /* ── Subtítulo ── */
@@ -64,8 +73,7 @@
 /* ── Botón submit ── */
 #login-form .btn--primary,
 #register-form .btn--primary {
-  margin-top: var(--space-xs);
-  cursor: pointer;
+  margin-top: var(--space-sm);
 }
 
 /* ── Link de alternancia ── */
@@ -74,6 +82,7 @@
   text-align: center;
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
+  padding-top: var(--space-xs);
 }
 
 #a-registro a,
