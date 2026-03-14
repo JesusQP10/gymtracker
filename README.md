@@ -1,4 +1,5 @@
-# 💪 GymTracker
+![Levantar](https://img.shields.io/badge/Levantar_Pesado-050505?style=for-the-badge)
+# 💪 GymTracker 
 
 Aplicación web fullstack para gestionar rutinas de entrenamiento y visualizar el progreso físico a lo largo del tiempo.
 
