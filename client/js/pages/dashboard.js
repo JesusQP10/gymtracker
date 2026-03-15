@@ -82,7 +82,7 @@ function renderLastSession(session) {
     document.getElementById('last-volume').textContent          = session.totalVolume ? `${session.totalVolume} kg` : '—';
 }
 
-// ── Datos de prueba (se usan cuando no hay backend) ──
+// ── Datos de prueba (Mientras NO HAY BACKEND) ──
 const MOCK = {
     user: { name: 'Jesús' },
     summary: {
