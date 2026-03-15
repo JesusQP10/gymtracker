@@ -2,7 +2,7 @@
 ## GymTracker — Aplicación web de seguimiento de entrenamiento
 
 **Versión:** 1.0  
-**Autor:** Jesús  
+**Autor:** Jesús Quintero Priego
 **Fecha:** Marzo 2026  
 **Estado:** Borrador
 

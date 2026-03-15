@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progreso — GymTracker</title>
+    <link rel="stylesheet" href="/client/css/reset.css">
+    <link rel="stylesheet" href="/client/css/variables.css">
+    <link rel="stylesheet" href="/client/css/main.css">
+    <link rel="stylesheet" href="/client/css/pages/progress.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <span class="navbar__logo">Gym<span>Tracker</span></span>
+        <div class="navbar__links">
+            <a href="dashboard.html" class="navbar__link">Dashboard</a>
+            <a href="routines.html" class="navbar__link">Rutinas</a>
+            <a href="progress.html" class="navbar__link navbar__link--active">Progreso</a>
+            <a href="#" class="navbar__link">Perfil</a>
+        </div>
+    </nav>
+
+    <main class="page">
+        <header class="page__header">
+            <div>
+                <h1 class="page__title">Progreso</h1>
+                <p class="page__subtitle">Tu evolución a lo largo del tiempo</p>
+            </div>
+        </header>
+
+        <!-- Stats rápidas -->
+        <section class="progress-stats" id="progress-stats">
+            <div class="stat-card card">
+                <span class="stat-card__label">Sesiones este mes</span>
+                <span class="stat-card__value" id="ps-month">—</span>
+            </div>
+            <div class="stat-card card">
+                <span class="stat-card__label">Sesiones esta semana</span>
+                <span class="stat-card__value" id="ps-week">—</span>
+            </div>
+            <div class="stat-card card">
+                <span class="stat-card__label">Racha actual</span>
+                <span class="stat-card__value" id="ps-streak">—</span>
+            </div>
+            <div class="stat-card card">
+                <span class="stat-card__label">Total sesiones</span>
+                <span class="stat-card__value" id="ps-total">—</span>
+            </div>
+        </section>
+
+        <!-- Gráfica de evolución -->
+        <section class="card progress-chart">
+            <div class="chart-controls">
+                <div class="form-group">
+                    <label class="form-label" for="exercise-select">Ejercicio</label>
+                    <select class="form-input" id="exercise-select">
+                        <option value="">Selecciona un ejercicio</option>
+                    </select>
+                </div>
+                <div class="date-filters">
+                    <div class="form-group">
+                        <label class="form-label" for="date-from">Desde</label>
+                        <input class="form-input" type="date" id="date-from">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="date-to">Hasta</label>
+                        <input class="form-input" type="date" id="date-to">
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-wrapper">
+                <canvas id="progress-chart"></canvas>
+                <div class="chart-empty" id="chart-empty">
+                    <p>Selecciona un ejercicio para ver su evolución</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Historial de sesiones -->
+        <section class="card progress-history">
+            <h2 class="card__title">Historial de sesiones</h2>
+            <ul class="history-list" id="history-list"></ul>
+        </section>
+
+    </main>
+
+    <script src="../js/pages/progress.js"></script>
+</body>
+</html>

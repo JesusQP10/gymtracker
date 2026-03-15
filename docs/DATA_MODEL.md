@@ -25,7 +25,7 @@ Almacena los datos de cada usuario registrado.
 ```json
 {
   "_id": "ObjectId",
-  "name": "Jesús García",
+  "name": "Jesús Quintero",
   "email": "jesus@email.com",
   "password": "$2b$10$hashbcrypt...",
   "weight": 78,

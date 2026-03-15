@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesión activa — GymTracker</title>
+    <link rel="stylesheet" href="/client/css/reset.css">
+    <link rel="stylesheet" href="/client/css/variables.css">
+    <link rel="stylesheet" href="/client/css/main.css">
+    <link rel="stylesheet" href="/client/css/pages/session.css">
+</head>
+<body>
+
+    <header class="session-header">
+        <div class="session-header__info">
+            <span class="session-header__routine" id="session-routine-name">Cargando...</span>
+            <span class="session-header__timer" id="session-timer">00:00</span>
+        </div>
+        <div class="session-header__actions">
+            <button class="btn btn--ghost" id="btn-abandon">Abandonar</button>
+            <button class="btn btn--primary" id="btn-finish">Finalizar sesión</button>
+        </div>
+    </header>
+
+    <main class="session" id="session-exercises"></main>
+
+    <div class="session-notes card">
+        <label class="form-label" for="session-notes-input">Notas de la sesión</label>
+        <textarea class="form-input" id="session-notes-input" rows="3" placeholder="¿Cómo fue el entrenamiento?"></textarea>
+    </div>
+
+    <!-- Modal: descanso entre series -->
+    <div class="rest-overlay" id="rest-overlay">
+        <div class="rest-modal">
+
+            <!-- Paso 1: elegir tiempo -->
+            <div id="rest-picker">
+                <p class="rest-modal__label">Tiempo de descanso</p>
+                <div class="rest-presets">
+                    <button class="rest-preset" data-s="30">30s</button>
+                    <button class="rest-preset rest-preset--active" data-s="60">1 min</button>
+                    <button class="rest-preset" data-s="90">1:30</button>
+                    <button class="rest-preset" data-s="120">2 min</button>
+                    <button class="rest-preset" data-s="180">3 min</button>
+                </div>
+                <div class="rest-picker-actions">
+                    <button class="btn btn--primary" id="btn-start-rest">Iniciar descanso</button>
+                    <button class="btn btn--ghost" id="btn-skip-rest">Saltar</button>
+                </div>
+            </div>
+
+            <!-- Paso 2: cuenta atrás -->
+            <div id="rest-countdown" style="display:none">
+                <p class="rest-modal__label">Descansando</p>
+                <span class="rest-modal__timer" id="rest-timer">60</span>
+                <p class="rest-modal__sub">segundos</p>
+                <button class="btn btn--ghost" id="btn-stop-rest">Terminar descanso</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../js/pages/session.js"></script>
+</body>
+</html>

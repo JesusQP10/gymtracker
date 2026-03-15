@@ -40,9 +40,11 @@ function renderRoutine(routine) {
     const today = getTodayName();
     document.getElementById('routine-day').textContent = today.charAt(0).toUpperCase() + today.slice(1);
 
+    const btn = document.getElementById('btn-start');
+
     if (!routine) {
         document.getElementById('routine-name').textContent = 'No tienes rutina asignada para hoy';
-        document.getElementById('btn-start').disabled = true;
+        btn.disabled = true;
         return;
     }
 
@@ -55,6 +57,10 @@ function renderRoutine(routine) {
             <span class="exercise-item__meta text-secondary">${ex.sets} × ${ex.reps}${ex.weight ? ` · ${ex.weight} kg` : ''}</span>
         </li>
     `).join('');
+
+    btn.onclick = () => {
+        window.location.href = `session.html?routineId=${routine._id}`;
+    };
 }
 
 // ── Rellena la última sesión ──
@@ -87,6 +93,7 @@ const MOCK = {
     },
     routines: [
         {
+            _id: '1',
             name: 'Pecho y tríceps',
             days: ['lunes', 'jueves'],
             exercises: [
@@ -97,6 +104,7 @@ const MOCK = {
             ],
         },
         {
+            _id: '2',
             name: 'Espalda y bíceps',
             days: ['martes', 'viernes'],
             exercises: [

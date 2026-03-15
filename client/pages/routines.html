@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutinas — GymTracker</title>
+    <link rel="stylesheet" href="/client/css/reset.css">
+    <link rel="stylesheet" href="/client/css/variables.css">
+    <link rel="stylesheet" href="/client/css/main.css">
+    <link rel="stylesheet" href="/client/css/pages/routines.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <span class="navbar__logo">Gym<span>Tracker</span></span>
+        <div class="navbar__links">
+            <a href="dashboard.html" class="navbar__link">Dashboard</a>
+            <a href="routines.html" class="navbar__link navbar__link--active">Rutinas</a>
+            <a href="progress.html" class="navbar__link">Progreso</a>
+            <a href="#" class="navbar__link">Perfil</a>
+        </div>
+    </nav>
+
+    <main class="page">
+        <header class="page__header">
+            <div>
+                <h1 class="page__title">Mis rutinas</h1>
+                <p class="page__subtitle">Gestiona y organiza tus entrenamientos</p>
+            </div>
+            <button class="btn btn--primary" id="btn-new-routine">+ Nueva rutina</button>
+        </header>
+
+        <div class="routines-grid" id="routines-grid"></div>
+
+        <div class="empty-state" id="empty-state" hidden>
+            <p class="empty-state__icon">🏋️</p>
+            <h2>Aún no tienes rutinas</h2>
+            <p>Crea tu primera rutina para empezar a entrenar</p>
+            <button class="btn btn--primary" id="btn-empty-new">+ Crear rutina</button>
+        </div>
+    </main>
+
+    <!-- Modal crear / editar rutina -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal card">
+            <header class="modal__header">
+                <h2 class="modal__title" id="modal-title">Nueva rutina</h2>
+                <button class="modal__close" id="modal-close" aria-label="Cerrar">&times;</button>
+            </header>
+
+            <form id="routine-form" class="modal__body">
+                <input type="hidden" id="routine-id">
+
+                <div class="form-group">
+                    <label class="form-label" for="input-name">Nombre</label>
+                    <input class="form-input" type="text" id="input-name" placeholder="Ej. Pecho y tríceps">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="input-desc">Descripción <span class="text-secondary">(opcional)</span></label>
+                    <input class="form-input" type="text" id="input-desc" placeholder="Ej. Rutina de empuje">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Días</label>
+                    <div class="days-grid">
+                        <label class="day-toggle"><input type="checkbox" value="monday">   <span>Lun</span></label>
+                        <label class="day-toggle"><input type="checkbox" value="tuesday">  <span>Mar</span></label>
+                        <label class="day-toggle"><input type="checkbox" value="wednesday"><span>Mié</span></label>
+                        <label class="day-toggle"><input type="checkbox" value="thursday"> <span>Jue</span></label>
+                        <label class="day-toggle"><input type="checkbox" value="friday">   <span>Vie</span></label>
+                        <label class="day-toggle"><input type="checkbox" value="saturday"> <span>Sáb</span></label>
+                        <label class="day-toggle"><input type="checkbox" value="sunday">   <span>Dom</span></label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="exercises-header">
+                        <label class="form-label">Ejercicios</label>
+                        <button type="button" class="btn-add-exercise" id="btn-add-exercise">+ Añadir</button>
+                    </div>
+                    <div id="exercises-list" class="exercises-list"></div>
+                </div>
+            </form>
+
+            <footer class="modal__footer">
+                <button class="btn btn--ghost" id="btn-cancel">Cancelar</button>
+                <button class="btn btn--primary" id="btn-save">Guardar rutina</button>
+            </footer>
+        </div>
+    </div>
+
+    <script src="../js/pages/routines.js"></script>
+</body>
+</html>
